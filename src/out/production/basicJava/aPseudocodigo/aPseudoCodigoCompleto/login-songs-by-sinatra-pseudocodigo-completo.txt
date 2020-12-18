@@ -1,0 +1,3 @@
+Ir a la pagina de Frank Sinatra
+presionar el boton de login
+introducir user y password válidos

@@ -1,0 +1,15 @@
+testCreateSong(numsongs)
+    {
+        iraURL("https://evening-bastion-49392.herokuapp.com/")
+        validarPaginaPrincipal()
+        hacerLogin("frank","sinatra")
+        iralaPaginadeSongs("frank")
+
+        numerodecanciones = 2
+        contadorcanciones se incializa en 0
+        while (contadorcanciones sea menor que numerodecanciones)
+            {
+               crearunaCancion("fly me to the moon",112,"07/02/2020","test")
+               aumentar el contadorcanciones en uno
+            }
+    }

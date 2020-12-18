@@ -1,0 +1,91 @@
+pasosCrearCancion()
+{
+    iraURL()
+    validarPaginaPrincipal()
+    hacerLogin()
+    iralaPaginadeSongs()
+    crearunaCancion()
+    validarCancionCreada()
+    validarListadeCanciones()
+    cerrarSitio()
+}
+
+validarPaginaPrincipal()
+{
+    esperar a que esten visibles los objetos :
+        la imagen de sinatra
+        el link de login
+    presionarLink("Log in")
+}
+
+iraURL()
+{
+  abrir Navegador
+  abrir url
+}
+
+
+boolean hacerLogin()
+{
+     esperar a que esten visibles los objetos :
+             UserName y Password
+     introducir user
+     introducir password
+     presionarBoton("Login")
+}
+
+presionarBoton()
+{
+    Presionar "boton"
+}
+
+boolean iralaPaginadeSongs()
+{
+   esperar a que este visible el mensaje
+               You are now logged in as <user> y el link "Create a new song"
+   presionarLink("Create a new song")
+}
+
+boolean crearunaCancion()
+{
+   esperar a que este visible el botón
+                  "Save song" y el mensaje : "Add A New Song"
+   introducir la canción
+   introducir la longitud
+   introducir la fecha
+   introducir los lyrics
+   presionarBoton("Save Song")
+}
+
+boolean validarCancionCreada()
+{
+    esperar que el mensaje : "Song successfully added"
+    validar el Title de la canción
+    validar la longitud de la canción
+    validar la fecha de la canción
+    validar los lyrics de la canción
+    presionarlink("back to songs index")
+}
+
+presionarLink()
+{
+    Dar click en el link
+}
+
+validarListadeCanciones(cancion)
+{
+    esperar a que la página carque
+    buscarlaCanciónCreada()
+    seleccionar el link "log out"
+}
+
+
+buscarlaCanciónCreada()
+{
+    Dentro de la lista desplegada buscar la nueva canción
+}
+
+cerrarSitio()
+ {
+    cerrar las paginas del sitio
+ }

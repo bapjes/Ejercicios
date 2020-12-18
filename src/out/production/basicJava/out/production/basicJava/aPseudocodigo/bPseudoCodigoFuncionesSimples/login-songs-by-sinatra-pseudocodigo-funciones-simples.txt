@@ -1,0 +1,36 @@
+procesoInicial()
+{
+    iraURL()
+    validarPaginaPrincipal()
+    hacerLogin()
+    iralaPaginadeSongs()
+    crearunaCancion()
+    validarCancionCreada()
+    validarListadeCanciones()
+    cerrarPagina()
+}
+
+validarPaginaPrincipal()
+{
+    esperar a que esten visibles los objetos :
+        la imagen de sinatra
+        el link de login
+}
+
+iraURL()
+{
+  abrir Navegador()
+  abrir Pagina()
+
+}
+
+
+boolean hacerLogin()
+{
+     esperar a que esten visibles los objetos :
+             UserName y Password
+     introducir un usuario válido()
+     introducir password válido()
+     presionar el botón de "Login"
+}
+

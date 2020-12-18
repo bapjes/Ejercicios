@@ -1,0 +1,19 @@
+testPrepararSandwich()
+{
+    numerodesandwich=0
+    while (numerodesandwich sea menor que 5)
+    {
+        hacerSandwich("jamón")
+        sumar uno a numerodesandwich
+    }
+}
+
+testPrepararSandwich()
+{
+    numerodesandwich=0
+    while (numerodesandwich sea menor que 5)
+    {
+        hacerSandwich("bologonia")
+        sumar uno a numerodesandwich
+    }
+}

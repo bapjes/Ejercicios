@@ -1,0 +1,29 @@
+loginSong()
+{
+    iraURL("https://evening-bastion-49392.herokuapp.com/")
+    validarPaginaPrincipal()
+    hacerLogin("frank","sinatra")
+}
+
+validarPaginaPrincipal()
+{
+    esperar a que esten visibles los objetos :
+        la imagen de sinatra
+        el link de login
+}
+
+iraURL(url)
+{
+  abrir Navegador()
+  abrir Pagina(url)
+}
+
+
+boolean hacerLogin(user,password)
+{
+     esperar a que esten visibles los objetos :
+             UserName y Password
+     introducir un usuario válido(user)
+     introducir password válido(password)
+     presionar el botón de "Login"
+}

@@ -1,0 +1,91 @@
+pasosCrearCancion()
+{
+    iraURL("https://evening-bastion-49392.herokuapp.com/")
+    validarPaginaPrincipal()
+    hacerLogin("frank","sinatra")
+    iralaPaginadeSongs("frank")
+    crearunaCancion("fly me to the moon",112,"07/02/2020","test")
+    validarCancionCreada("fly me to the moon",112,"07/02/2020","test")
+    validarListadeCanciones("fly me to the moon")
+    cerrarSitio()
+}
+
+validarPaginaPrincipal()
+{
+    esperar a que esten visibles los objetos :
+        la imagen de sinatra
+        el link de login
+    presionarLink("Log in")
+}
+
+iraURL(url)
+{
+  abrir Navegador
+  abrir url
+}
+
+
+boolean hacerLogin(user,password)
+{
+     esperar a que esten visibles los objetos :
+             UserName y Password
+     introducir user
+     introducir password
+     presionarBoton("Login")
+}
+
+presionarBoton(boton)
+{
+    Presionar "boton"
+}
+
+boolean iralaPaginadeSongs(user)
+{
+   esperar a que este visible el mensaje
+               You are now logged in as <user> y el link "Create a new song"
+   presionarLink("Create a new song")
+}
+
+boolean crearunaCancion(canción,longitud,fecha,lyrics)
+{
+   esperar a que este visible el botón
+                  "Save song" y el mensaje : "Add A New Song"
+   introducir la canción
+   introducir la longitud
+   introducir la fecha
+   introducir los lyrics
+   presionarBoton("Save Song")
+}
+
+boolean validarCancionCreada(canción,longitud,fecha,lyrics)
+{
+    esperar que el mensaje : "Song successfully added"
+    validar el Title de la canción
+    validar la longitud de la canción
+    validar la fecha de la canción
+    validar los lyrics de la canción
+    presionarlink("back to songs index")
+}
+
+presionarLink(linkTexto)
+{
+    Dar click en el link "linkTexto"
+}
+
+validarListadeCanciones(cancion)
+{
+    esperar a que la página carque
+    buscarlaCanciónCreada(cancion)
+    seleccionar el link "log out"
+}
+
+
+buscarlaCanciónCreada(cancion)
+{
+    Dentro de la lista desplegada buscar "canción"
+}
+
+cerrarSitio()
+ {
+    cerrar las paginas del sitio
+ }

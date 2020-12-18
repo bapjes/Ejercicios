@@ -1,5 +1,7 @@
 package mArrays;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Binario {
@@ -10,8 +12,10 @@ public class Binario {
         Scanner inputValue = new Scanner(System.in);
         dividendo = inputValue.nextInt();
 
+        List<Integer> listnum = new ArrayList<Integer>();
         String numeroBinario = "";
         numeroBinario = Integer.toString(dividendo % 2);
+
         int cociente = (dividendo / 2);
 
 

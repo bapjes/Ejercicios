@@ -1,0 +1,76 @@
+-- crear caso de prueba en puras funciones
+
+testInformacionCelular() {
+    ingresar("http://www.telcel.com")
+    seleccionarDeTiendaEnLinea("smartphone")
+    seleccionarEstado("Tlaxcala")
+    verificarPaginaResultados()
+    enlace_modelo = capturarInformacionTelefonoMasCaro()
+    seleccionarTelefonoMasCaro(enlace_modelo)
+    verificarInformacionTelefono()
+    cerrarPagina()
+}
+
+ingresar(url) {
+     abrirnavegador(url)
+     esperaraquecarguelapagina(3000)
+}
+
+seleccionarDeTiendaEnLinea(opcion) {
+    ir a la liga de Tienda en linea()
+    expandir el menu()
+    esperar a que abra el menu
+    seleccionar(opcion)
+
+}
+
+seleccionarEstado(nombreEstado) {
+    esperar a que aparezca una ventana con los estados(3000)
+    expandir la caja de estados()
+    elegir(nombreEstado)
+    presionar boton de ENTAR()
+}
+
+verificarPaginaResultados()
+{
+    esperar que se despliegue la página de con los telefonos del estado
+}
+
+enlace_modelo capturarInformacionTelefonoMasCaro()
+{
+    precio = 0
+    enlace_modelo = ""
+
+    Hacer un recorrido del primer telefono hasta el ultimo de la página()
+    {
+        elegir teléfono()
+        si el precio del telefono elegido es mayor a precio
+            {
+                precio = precio del telefono elegido
+                enlace_modelo = modelo del telefono actual
+            }
+    }
+
+    regresa enlace_modelo
+
+}
+
+
+seleccionarTelefonoMasCaro(enlace_modelo)
+{
+    seleccionar enlace_modelo
+}
+
+
+verificarInformacionTelefono(enlace_modelo)
+{
+    esperar a que la pagina cargue(3000)
+    revisar la informacion telefono seleccionado()
+}
+
+
+cerrarPagina(url)
+{
+    cierra Pagina Actual(url)
+}
+

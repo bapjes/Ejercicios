@@ -1,0 +1,7 @@
+Ir a la pagina de Frank Sinatra
+presionar el boton de login
+introducir user y password válidos
+presionar el botón de login
+introducir datos de la canción : canción,longitud,fecha,lyrics
+presionar el botón de save song
+

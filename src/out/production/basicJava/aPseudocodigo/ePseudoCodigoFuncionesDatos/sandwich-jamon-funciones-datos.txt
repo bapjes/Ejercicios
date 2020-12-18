@@ -1,0 +1,38 @@
+hacerSandwich(carne)
+ {
+     iralSuperporIngredientes("panbimbo","jitomatecebolla","chilesmayonesa",carne)
+     sandwich = prepararSandwich("panbimbo","jitomatecebolla","chilesmayonesa",carne,"si")
+     servirlo(sandwich,"papas")
+ }
+
+
+iralSuperporIngredientes(pan,verdura,salsa,carne)
+ {
+     elegir pan
+     elegir verdura
+     elegir salsa
+     elegir carne
+ }
+
+sandwich prepararsandwich(pan,verdura,salsa,carne,meteralhorno)
+ {
+     Sacar rebanadas de pan/ o bien cortar el pan(pan)
+     ponerle la salsa
+     ponerle la verdura
+     ponerle la carne
+     if (meteralHorno)
+        {
+            meter el sandwich al horno
+        }
+     regresa sandwich
+ }
+
+
+servirlo(sandwich,guarnición)
+ {
+     poner el sandwich en un plato
+     acompañarlo de una guarnición
+     servir
+ }
+
+

@@ -1,0 +1,7 @@
+testPrepararSandwich(carne)
+    {
+        if (carne = "jamón")
+           hacerSandwich("jamón")
+        else
+           hacerSandwich("bologonia")
+    }

@@ -1,0 +1,62 @@
+escenarioBusquedaFiltro()
+{
+    navegar("https://amazon.com.mx")
+    verificarHomePage()
+    buscarArticulo("Laptop")
+    verificarPaginaResultados()
+    filtrarPorTexto("core i5")
+    filtrarPorPrecio(10000, 20000)
+    seleccionarArticulo(1)
+    verificarPaginaArticulo()
+}
+
+navegar(url)
+    {
+        open(url)
+    }
+
+verificarHomePage()
+    {
+        waitforelementpresent("xpath=//div[@id='nav-logo']/a/span", 3000)
+        waitforelementpresent("id=twotabsearchtextbox", 3000)
+    }
+
+
+buscarArticulo(nombreArticulo)
+    {
+        editcontent("id=twotabsearchtextbox", "laptop")
+        click("css=.nav-search-submit > .nav-input")
+    }
+
+
+verificarPaginaResultados()
+    {
+        waitforelementpresent("xpath=//div[@id='p_89-title']/span",5000)
+    }
+
+
+filtrarPorTexto(tipoProducto)
+    {
+        check("xpath=//ul[6]/li[7]/span/a/div/label/i")
+    }
+
+
+filtrarPorPrecio(precioMinimo, precioMaximo)
+    {
+        editcontent("id=low-price", precioMinimo)
+        editcontent("id=high-price", precioMaximo)
+        click("xpath=(//input[@type='submit'])[2]")
+
+    }
+
+seleccionarArticulo(numArticulo)
+    {
+        waitforelementpresent("xpath=//img[@class='s-image'",3000)
+        click (id=ivLargeImage)
+    }
+
+
+verificarPaginaArticulo()
+    {
+        verifyelementpresent("xpath=//div[@id='ivLargeImage']/img")
+    }

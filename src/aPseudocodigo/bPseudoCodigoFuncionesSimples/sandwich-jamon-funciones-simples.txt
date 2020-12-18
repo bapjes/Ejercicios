@@ -1,0 +1,34 @@
+hacerSandwich()
+{
+    iralSuperporIngredientes()
+    prepararSandwich()
+    servirlo()
+}
+
+
+iralSuperporIngredientes()
+{
+    elegirPan()
+    elegirVerduras()
+    elegirSalsas()  -- chiles, mayonesa
+    elegirCarne()
+}
+
+prepararSandwich()
+{
+    Sacar rebanadas de pan/ o bien cortar el pan()
+    ponerleSalsa()
+    ponerleVerduras()
+    ponerleCarne()
+    meterloalHorno()
+}
+
+
+servirlo()
+{
+    poner el sahdwich en un plato()
+    acompañarlo de una guarnición()
+    servir()
+}
+
+
