@@ -94,7 +94,7 @@ public class Tareas {
 
     public static void ejercicio2()
     {
-        String nombre = "Jesus";
+        String nombre = "Beatriz";
 
         System.out.println("Bienvenido " + nombre);
     }
