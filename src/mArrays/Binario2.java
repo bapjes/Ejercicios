@@ -1,9 +1,6 @@
 package mArrays;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Binario2 {
     public static void main(String[] args) {
@@ -30,6 +27,7 @@ public class Binario2 {
 
         Collections.reverse(listnum);
         System.out.println(listnum);
+
 
 
     }
